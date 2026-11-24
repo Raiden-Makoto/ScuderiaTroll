@@ -1,4 +1,4 @@
-# Powertrain Design
+# ScuderiaTroll ST67: Powertrain Design
 
 ## Concept
 
@@ -87,7 +87,7 @@ See [aero.md](aero.md). Two electric underfloor fans suck air from beneath a ski
 
 All figures are rough estimates: F1 values are commonly cited approximations, and ScuderiaTroll values are calculated from this document's specifications.
 
-| Metric | 2026 F1 car (est.) | ScuderiaTroll OP4 diesel-electric (est.) |
+| Metric | 2026 F1 car (est.) | ScuderiaTroll ST67 (est.) |
 | --- | --- | --- |
 | Total power | ~1,000 hp (V6 hybrid) | ~1,350 hp (750 hp OP4 + 450 kW electric) |
 | Mass (car + driver, no fuel) | 768 kg | ~862 kg |

@@ -1,6 +1,6 @@
 # Weight Budget
 
-Component-level mass budget for the ScuderiaTroll car, using the powertrain in [powertrain.md](powertrain.md), the aftertreatment in [aftertreatment.md](aftertreatment.md), and the cooling system in [cooling.md](cooling.md).
+Component-level mass budget for the ScuderiaTroll ST67, using the powertrain in [powertrain.md](powertrain.md), the aftertreatment in [aftertreatment.md](aftertreatment.md), and the cooling system in [cooling.md](cooling.md).
 
 All figures are design estimates for a fictional vehicle. Chassis items are benchmarked against a 2026-style F1 car; powertrain items are derived from the adopted specifications. Treat the total as roughly ±40 kg.
 
@@ -175,7 +175,7 @@ Partly offset by the Alloy X engine (now close to F1 V6 weight despite diesel-st
 
 ## Performance Impact
 
-| Metric | 2026 F1 (estimate) | ScuderiaTroll at 862 kg |
+| Metric | 2026 F1 (estimate) | ST67 at 862 kg |
 | --- | --- | --- |
 | Power | ~1,000 hp | ~1,350 hp |
 | Power-to-weight, race start | ~1.19 hp/kg (768 + 70 kg fuel) | ~1.41 hp/kg (862 + 98 kg fluids) |

@@ -1,6 +1,6 @@
 # Aerodynamics
 
-Aero concept for the ScuderiaTroll car: a fan-assisted ground-effect car in the spirit of the Brabham BT46B, with sliding skirts, smaller wings than a pure wing car, fully automatic active aero, and DRS as the only driver-operated aero device.
+Aero concept for the ScuderiaTroll ST67: a fan-assisted ground-effect car in the spirit of the Brabham BT46B, with sliding skirts, smaller wings than a pure wing car, fully automatic active aero, and DRS as the only driver-operated aero device.
 
 All figures are design estimates for a fictional vehicle. Mass and layout come from [weight-budget.md](weight-budget.md) and [layout.md](layout.md).
 

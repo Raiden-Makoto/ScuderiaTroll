@@ -1,6 +1,6 @@
 # Layout (Rough)
 
-First-pass packaging layout for the ScuderiaTroll car, placing every item from [weight-budget.md](weight-budget.md) to estimate weight distribution and centre of gravity (CG). Very rough: positions are to ~0.1 m.
+First-pass packaging layout for the ScuderiaTroll ST67, placing every item from [weight-budget.md](weight-budget.md) to estimate weight distribution and centre of gravity (CG). Very rough: positions are to ~0.1 m.
 
 ## 3D Model
 

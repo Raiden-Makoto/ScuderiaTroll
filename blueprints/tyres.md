@@ -1,6 +1,6 @@
 # Tyres
 
-Tyre specification and strategy for the ScuderiaTroll car. All figures are design estimates for a fictional vehicle; mass and loads come from [weight-budget.md](weight-budget.md), [aero.md](aero.md), and [suspension.md](suspension.md).
+Tyre specification and strategy for the ScuderiaTroll ST67. All figures are design estimates for a fictional vehicle; mass and loads come from [weight-budget.md](weight-budget.md), [aero.md](aero.md), and [suspension.md](suspension.md).
 
 ## Rules That Apply
 

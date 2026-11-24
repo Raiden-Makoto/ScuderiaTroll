@@ -1,4 +1,4 @@
-"""ScuderiaTroll primitive layout model.
+"""ScuderiaTroll ST67 primitive layout model.
 
 Every component is a box or a cylinder, so the car can be rebuilt in Blender
 or any other 3D tool. The component list below is the single source of truth
@@ -342,7 +342,7 @@ def export_svg(svg_path, view, width=1100, height=640):
     oy = margin + 40 + max(ys) * scale
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
            f'<rect width="{width}" height="{height}" fill="#f7f7f5"/>',
-           f'<text x="{margin}" y="40" font-family="sans-serif" font-size="22" fill="#222">ScuderiaTroll layout: {VIEWS[view][2]}</text>']
+           f'<text x="{margin}" y="40" font-family="sans-serif" font-size="22" fill="#222">ScuderiaTroll ST67: {VIEWS[view][2]}</text>']
     for depth, proj, colour, alpha in sorted(polys, key=lambda p: -p[0]):
         pts = " ".join(f"{ox + px * scale:.1f},{oy - py * scale:.1f}" for px, py in proj)
         stroke_op = 0.35 if alpha < 1 else 0.6

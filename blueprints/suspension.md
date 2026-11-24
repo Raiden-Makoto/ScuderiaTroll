@@ -1,6 +1,6 @@
 # Suspension
 
-Fully active electromechanical suspension with passive springs in parallel, for the ScuderiaTroll car. All figures are design estimates for a fictional vehicle; masses and positions come from [weight-budget.md](weight-budget.md) and [layout.md](layout.md).
+Fully active electromechanical suspension with passive springs in parallel, for the ScuderiaTroll ST67. All figures are design estimates for a fictional vehicle; masses and positions come from [weight-budget.md](weight-budget.md) and [layout.md](layout.md).
 
 ## Why Active
 
