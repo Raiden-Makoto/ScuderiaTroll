@@ -30,19 +30,22 @@ Being over the minimum is legal; the minimum is only a floor.
 | Halo | 7 | Standard FIA titanium |
 | Front, rear & side crash structures | 15 | |
 | Floor, bodywork & sidepods | 55 | Includes active cooling louvers |
-| Front wing | 12 | |
-| Rear wing & beam wing | 13 | Includes active aero actuators |
-| Suspension (all four corners) | 50 | Carbon wishbones and pushrods/pullrods; Alloy X uprights and rod ends |
-| Wheels & tyres | 76 | 4 × ~19 kg; forged magnesium rims (lighter than Alloy X for wheels) |
+| Front wing | 10 | Smaller than F1's thanks to the underfloor fan; automatic balance flap |
+| Rear wing & beam wing | 11 | Includes the DRS flap and actuator |
+| Underfloor fans, motors & inverters (2) | 5 | Lightweight, 2 × 12.5 kW; also provide low-speed radiator cooling ([aero.md](aero.md)) |
+| Fan duct & debris guards | 4 | Debris guards are safety parts (Sporting Rule 5) |
+| Sliding skirts, springs & wear strips | 8 | |
+| Suspension (all four corners) | 60 | Carbon wishbones and pushrods/pullrods; Alloy X uprights and rod ends; fully active electromechanical actuators with passive springs ([suspension.md](suspension.md)) |
+| Wheels & tyres | 81 | W fronts (~20 kg each) and HD rears (~20.5 kg each) on forged magnesium rims ([tyres.md](tyres.md)) |
 | Brakes | 29 | Carbon discs, Alloy X calipers, brake-by-wire, ducts; smaller rear brakes thanks to MGU-K regen |
 | Steering | 10 | |
 | Electronics, wiring loom & sensors | 30 | Includes emissions logging (Rule 4) |
-| Engine & ancillary cooling | 42 | Radiators, oil coolers, pipework, fluids, two electric fans ([cooling.md](cooling.md)) |
+| Engine & ancillary cooling | 41 | Radiators, oil coolers, pipework, fluids, radiator-to-fan ducts and valves ([cooling.md](cooling.md)) |
 | Hydraulics | 12 | |
 | Fire suppression | 5 | |
-| Fuel cell & pumps | 12 | ~115 L bladder for 90 kg of HVO |
+| Fuel cell & pumps | 12 | ~120 L bladder for 94 kg of HVO |
 | Miscellaneous | 13 | Alloy X fasteners, mirrors, cameras, transponder, paint |
-| **Subtotal** | **426** | |
+| **Subtotal** | **453** | |
 
 ### Powertrain
 
@@ -67,15 +70,15 @@ Being over the minimum is legal; the minimum is only a floor.
 
 | Item | Mass (kg) |
 | --- | --- |
-| Chassis & vehicle systems | 426 |
+| Chassis, aero & vehicle systems | 453 |
 | Powertrain | 329 |
 | Driver (FIA allowance) | 80 |
-| **Car + driver (minimum-weight condition)** | **835** |
-| Fuel (HVO) | 90 |
+| **Car + driver (minimum-weight condition)** | **862** |
+| Fuel (HVO) | 94 |
 | DEF | 4 |
-| **Race start** | **~929** |
+| **Race start** | **~960** |
 
-**Result: ~835 kg, ~67 kg over the 768 kg FIA minimum.**
+**Result: ~862 kg, ~94 kg over the 768 kg FIA minimum.**
 
 ## Reductions Applied
 
@@ -111,6 +114,40 @@ The cooling fans then added 2 kg, giving 859 kg.
 
 Giving 835 kg.
 
+### Round 3: Fan-Assisted Ground Effect (Additions)
+
+| Change | Mass (kg) |
+| --- | --- |
+| Lightweight underfloor fans, motors & inverters | +5 |
+| Fan duct & debris guards | +4 |
+| Sliding skirts | +8 |
+| Radiator-to-fan ducts and valves | +1 |
+| Separate cooling fans deleted (underfloor fans take over) | −2 |
+| Smaller front and rear wings | −4 |
+| **Net** | **+12** |
+
+Giving 847 kg.
+
+### Round 4: Active Suspension (Addition)
+
+| Change | Mass (kg) |
+| --- | --- |
+| Fully active electromechanical suspension, net of deleted dampers, heave springs, and anti-roll bars | +10 |
+
+Giving 857 kg. Holding the floor at a steady height and attitude keeps the fan and ground-effect downforce consistent ([suspension.md](suspension.md)).
+
+### Round 5: Tyres Rated for the Loads
+
+| Change | Mass (kg) |
+| --- | --- |
+| W (380 mm) fronts instead of F1-like 305 mm | +2 |
+| HD (405 mm, reinforced) rears instead of F1-like 380 mm | +3 |
+| **Net** | **+5** |
+
+Giving 862 kg. The car's peak per-tyre loads (~13.4 kN rear, ~10.9 kN front) need these ratings ([tyres.md](tyres.md)).
+
+The fans also draw ~15 kW on average, adding ~4 kg of fuel (90 → 94 kg). The trade buys roughly double F1's slow-corner grip ([aero.md](aero.md)).
+
 Options considered and rejected:
 
 - **Smaller battery:** Would cut electric power below 450 kW and break the 55/45 split.
@@ -122,7 +159,12 @@ Options considered and rejected:
 
 ## Where the Remaining Excess Comes From
 
-The chassis is at or slightly below F1 level, so the ~67 kg excess comes from the powertrain. The main contributors, compared with an F1 car:
+The ~94 kg excess comes from the powertrain, the fan system, active suspension, and the heavier-rated tyres those loads require. The main contributors, compared with an F1 car:
+
+- **Wider, heavier-rated tyres (~5 kg).**
+
+- **Underfloor fan system and skirts (~12 kg net):** Deliberate, for slow-corner grip.
+- **Active suspension (~10 kg net):** Deliberate, to keep the floor working.
 
 - **Front motors, inverters, driveshafts (~40 kg):** F1 cars have no front drive.
 - **Second turbo stage and charge-air cooler (~15 kg).**
@@ -133,19 +175,19 @@ Partly offset by the Alloy X engine (now close to F1 V6 weight despite diesel-st
 
 ## Performance Impact
 
-| Metric | 2026 F1 (estimate) | ScuderiaTroll at 835 kg |
+| Metric | 2026 F1 (estimate) | ScuderiaTroll at 862 kg |
 | --- | --- | --- |
 | Power | ~1,000 hp | ~1,350 hp |
-| Power-to-weight, race start | ~1.19 hp/kg (768 + 70 kg fuel) | ~1.45 hp/kg (835 + 94 kg fluids) |
-| Power-to-weight, race end | ~1.30 hp/kg | ~1.62 hp/kg |
+| Power-to-weight, race start | ~1.19 hp/kg (768 + 70 kg fuel) | ~1.41 hp/kg (862 + 98 kg fluids) |
+| Power-to-weight, race end | ~1.30 hp/kg | ~1.57 hp/kg |
 
-Power-to-weight is ~22–25% better than F1, so straight-line acceleration wins. The extra ~67 kg costs:
+Power-to-weight is ~18–21% better than F1, so straight-line acceleration wins. The extra ~94 kg costs:
 
-- **Braking & cornering:** Every corner needs more grip for the same speed. Downforce doesn't scale with mass, so mid-speed and high-speed corners are slower.
-- **Tyre wear:** Tyres sized for ~800 kg cars will degrade faster at ~930 kg. With only 3 swaps per race (Sporting Rule 2), tyre management becomes a central strategy problem.
+- **Braking & cornering:** Every corner needs more grip for the same speed. The underfloor fan more than covers this in slow and medium corners; in the fastest sweepers the car gives up some grip to F1 ([aero.md](aero.md)).
+- **Tyre wear:** Heavier loads wear tyres faster, even with load-rated sizes; active suspension's tyre load management partly offsets this ([tyres.md](tyres.md)). With only 3 swaps per race (Sporting Rule 2), tyre management becomes a central strategy problem.
 - **Front-axle regen helps here:** More mass means more braking energy to recover, so the larger battery and front motors partly pay for themselves.
 
 ## Open Items
 
 1. ~~Weight distribution~~ **Done:** [layout.md](layout.md) puts the split at ~45/55 front/rear with a ~0.31 m CG height, inside the F1 window without ballast.
-2. **Tyre specification:** Whether the tyre supplier provides tyres rated for heavier cars, or teams must manage degradation.
+2. ~~Tyre specification~~ **Done:** single control supplier with a catalogue of load-rated sizes (Sporting Rule 17); W fronts and HD rears ([tyres.md](tyres.md)).

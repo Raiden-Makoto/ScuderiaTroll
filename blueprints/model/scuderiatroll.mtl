@@ -15,6 +15,18 @@ newmtl aero
 Kd 0.7843 0.0627 0.1804
 d 1.00
 
+newmtl drs
+Kd 1.0000 0.4196 0.5059
+d 1.00
+
+newmtl fan_car
+Kd 0.0000 0.7216 0.5804
+d 1.00
+
+newmtl skirt
+Kd 0.1765 0.2039 0.2118
+d 1.00
+
 newmtl tyre
 Kd 0.1020 0.1020 0.1020
 d 1.00
@@ -25,6 +37,10 @@ d 1.00
 
 newmtl suspension
 Kd 0.3608 0.3608 0.3608
+d 1.00
+
+newmtl actuator
+Kd 0.9098 0.2627 0.5765
 d 1.00
 
 newmtl driver

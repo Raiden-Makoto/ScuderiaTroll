@@ -26,7 +26,11 @@ Coordinates (metres, right-handed): **x** rearward from the front axle centrelin
 | Colour | Components |
 | --- | --- |
 | Red (translucent) | Sidepods, engine cover, airbox |
-| Red (solid) | Front wing, rear wing, beam wing |
+| Red (solid) | Front wing, rear wing main plane, beam wing |
+| Pink | Rear wing DRS flap |
+| Green cylinders (rear) | Underfloor fans and fan duct ([aero.md](aero.md)) |
+| Near-black strips | Sliding skirts along the floor edges |
+| Magenta-pink boxes | Active suspension spring/actuator units ([suspension.md](suspension.md)) |
 | Dark slate | Monocoque (translucent), halo, crash structures |
 | Yellow | Driver |
 | Orange | OP4 engine |
@@ -46,7 +50,8 @@ Coordinates (metres, right-handed): **x** rearward from the front axle centrelin
 | --- | --- | --- |
 | Wheelbase | 3.5 m | ≤ 3.6 m (two-axle) |
 | Overall length | ~5.0 m (front wing tip to rear crash structure) | ≤ 5.5 m |
-| Overall width | 2.0 m (outer tyre faces) | ≤ 2.0 m |
+| Overall width | 2.0 m (outer tyre faces; 380 mm fronts, 405 mm rears) | ≤ 2.0 m |
+| Track (centre to centre) | ~1.62 m front, ~1.60 m rear | |
 | Overall height | ~0.95 m (top of airbox) | ≤ 1.2 m |
 
 ## Packaging
@@ -57,21 +62,23 @@ Coordinates (metres, right-handed): **x** rearward from the front axle centrelin
 - **Battery:** Low and central beneath the driver's seat, keeping its 50 kg near the floor.
 - **Fuel cell:** ~115 L, between the driver and the engine.
 - **Front motors:** Inboard either side of the footwell, driving the front wheels through short driveshafts and sharing space with the front suspension. Similar packaging has been done on front-motor Le Mans prototypes.
-- **Cooling:** HT and LT radiators in the sidepods with electric fans at their exits; the battery cooling core sits in the airbox ([cooling.md](cooling.md)).
+- **Cooling:** HT and LT radiators in the sidepods, with ducts from their exits to the underfloor fans for low-speed airflow; the battery cooling core sits in the airbox ([cooling.md](cooling.md)).
 
 ## Results
 
 From the model's mass report:
 
-| Metric | Car + driver (835 kg) | Race start (929 kg) | F1 reference |
+| Metric | Car + driver (862 kg) | Race start (960 kg) | F1 reference |
 | --- | --- | --- | --- |
-| CG position (x) | 1.91 m behind front axle | 1.93 m | |
-| Front / rear weight split | **45.6 / 54.4** | **44.8 / 55.2** | Recent F1 regulations mandate roughly 44–46% front |
-| CG height | **~0.31 m** | ~0.32 m | ~0.30 m (commonly cited estimate) |
+| CG position (x) | 1.92 m behind front axle | 1.95 m | |
+| Front / rear weight split | **45.0 / 55.0** | **44.3 / 55.7** | Recent F1 regulations mandate roughly 44–46% front |
+| CG height | **~0.31 m** | ~0.31 m | ~0.30 m (commonly cited estimate) |
 | Left-right CG offset | ~3 mm toward the exhaust (left) side | ~1 mm | Negligible |
 
+The underfloor fans at the rear pulled the split ~0.6% rearward; at race start it sits near the bottom of the F1 window. Moving the battery ~0.3 m forward would recentre it (see Tuning Levers).
+
 - **Weight split lands in the F1 window without ballast.** The front motors near the front axle and the battery under the seat pull weight forward, balancing the engine, gearbox, and turbos at the rear.
-- **CG height matches F1 despite ~67 kg more mass.** The low opposed-piston engine and the floor-mounted battery offset the extra mass. Raising the engine to a typical V6 centre height (~0.38 m) would lift the whole car's CG by ~18 mm.
+- **CG height matches F1 despite ~94 kg more mass.** The low opposed-piston engine and the floor-mounted battery offset the extra mass. Raising the engine to a typical V6 centre height (~0.38 m) would lift the whole car's CG by ~18 mm.
 - **Fuel burn barely moves the balance:** The fuel cell sits close to the CG, so the split moves less than 1% from race start to finish.
 - **Left-right balance:** The exhaust-side hardware (~40 kg) is mostly offset by the intake-side hardware and the rear MGU-K.
 
@@ -82,6 +89,6 @@ From the model's mass report:
 
 ## Open Items
 
-1. **Radiator core area and inlet sizing** ([cooling.md](cooling.md)): needs a sidepod cross-section.
-2. **Front suspension packaging:** Wishbones, pushrods, and steering around the front motors and driveshafts.
-3. **Aero surfaces:** Floor, diffuser, and engine cover profile, now that the engine height is known.
+1. ~~Radiator core area and inlet sizing~~ **Done:** ~0.26 m² of stacked LT/HT core and a ~0.13 m² inlet per sidepod ([cooling.md](cooling.md)).
+2. ~~Front suspension packaging~~ **Done:** front spring/actuator units sit on top of the monocoque, leaving the low front bulkhead for the motors; driveshafts pass between the wishbones ([suspension.md](suspension.md)).
+3. ~~Aero surfaces~~ **Concept done:** fan-assisted ground effect with sliding skirts ([aero.md](aero.md)); detailed floor, tunnel, and diffuser shapes still open.
