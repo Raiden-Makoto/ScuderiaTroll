@@ -1,3 +1,5 @@
+# Sporting Rules
+
 1. Overtime Shootouts: Controlled pit stop with portable fuel churns and damage repairs allowed—no free tire swaps—guaranteeing a pure green-flag sprint finish.
 2. Optional Pit Stops, 3-Swap Cap & Mix-and-Match Compounds: No mandatory pit stops or two-compound rule, and teams can mix different tire compounds across all four wheels on the same car. Drivers get a hard limit of 3 pit-stop tire changes per race (including Red Flags and Safety Cars).
 3. True Wet-Weather Racing: No Red Flags for rain or spray alone unless standing water turns the track into an ocean. Switching onto Full Wets is free (doesn't count toward the 3-swap cap), while switching off Full Wets counts as one of your 3 swaps.
