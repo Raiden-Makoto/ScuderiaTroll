@@ -2,7 +2,7 @@
 
 ## Concept
 
-A clean diesel-electric **parallel hybrid** (inspired by BAE HybriDrive) with a **55% diesel / 45% electric** power split. The diesel drives the rear wheels through the gearbox, assisted by a rear MGU-K, while one MGU-K per front wheel provides electric all-wheel drive with torque vectoring. It runs on 100% renewable HVO (Hydrotreated Vegetable Oil) synthetic diesel, with an oxidation catalyst + SCR-coated particulate filter + Selective Catalytic Reduction (SCR) aftertreatment system (see [aftertreatment.md](aftertreatment.md)).
+A clean diesel-electric **parallel hybrid** (inspired by BAE HybriDrive) with a **55% diesel / 45% electric** power split. The diesel drives the rear wheels through the gearbox, assisted by a rear MGU-K, while one MGU-K per front wheel provides electric all-wheel drive with torque vectoring. It runs on 100% HVO (Hydrotreated Vegetable Oil) renewable diesel, with an oxidation catalyst + SCR-coated particulate filter + Selective Catalytic Reduction (SCR) aftertreatment system (see [aftertreatment.md](aftertreatment.md)).
 
 This targets Technical Rule 4: race-averaged exhaust below EPA Tier 4 locomotive limits, with HVO as the alternative fuel that keeps the car from being purely electric.
 
@@ -25,7 +25,7 @@ This targets Technical Rule 4: race-averaged exhaust below EPA Tier 4 locomotive
 
 - **Variable-geometry compound (series) turbocharging:** Two electric-assisted turbos (MGU-H) in series. A single exhaust manifold on the engine's exhaust-port side feeds a high-pressure turbo, the aftertreatment sits between stages, and a low-pressure turbo harvests the remaining energy. The intake side runs low-pressure compressor → intercooler → high-pressure compressor → intercooler. The MGU-H motors eliminate turbo lag and provide scavenging air at low engine speeds.
 - **No fuel-flow limit = massive boost:** Real F1 caps fuel flow to control power. Without that cap, the two-stage turbos run ~3–3.5 bar gauge (~45–50 psi) of boost, turning a 3.2 L opposed-piston block into a 750 hp (560 kW) engine on its own.
-- **Front-axle regen, AWD & torque vectoring:** Two 125 kW front MGU-Ks, one per front wheel, alongside a 200 kW rear MGU-K. The front motors are mounted inboard (keeping unsprung mass low) and drive each wheel through a short driveshaft, with no front differential. Controlling each front wheel independently allows torque vectoring: more drive to the outside wheel helps rotate the car on corner entry and exit. Costs ~5–10 kg over a single front motor, partly offset by deleting the front differential. Because a high-boost diesel-electric produces colossal torque out of slow corners, all-wheel drive lets the car put all ~1,350 combined horsepower down without shredding the rear tyres.
+- **Front-axle regen, AWD & torque vectoring:** Two 125 kW front MGU-Ks, one per front wheel, alongside a 200 kW rear MGU-K. The front motors are mounted inboard (keeping unsprung mass low) and drive each wheel through a short driveshaft, with no front differential. Controlling each front wheel independently allows torque vectoring: more drive to the outside wheel helps rotate the car on corner entry and exit. Costs ~5–10 kg over a single front motor, partly offset by deleting the front differential. Out of slow corners the car is traction-limited, not power-limited, so driving all four wheels puts far more of the ~1,350 hp down than rear-wheel drive could, and spreads the work across four tyres instead of two.
 - **Active, temperature-controlled cooling:** Three cooling loops (high-temperature engine, low-temperature charge-air/electric, battery) with sidepod louvers driven by coolant temperature and speed: partly closed at high speed where ram air is plentiful, fully open at low speed, with predictive pre-cooling before long straights and electric fans for Safety Car and pit lane. See [cooling.md](cooling.md).
 
 ## Making It Fast
@@ -34,7 +34,7 @@ This targets Technical Rule 4: race-averaged exhaust below EPA Tier 4 locomotive
 
 See [weight-budget.md](weight-budget.md) for the component-level budget: ~835 kg (car + driver, no fuel or DEF), against the 768 kg FIA minimum.
 
-Diesel engines need thick cylinder walls to handle huge compression pressures (200+ bar), which adds weight. To keep the car agile:
+Diesels run high peak cylinder pressures (200+ bar), but modern F1 engines already run in a similar range, so the structural penalty is smaller than diesel's reputation suggests. Alloy X's strength at temperature covers it without thick walls. To keep the car agile:
 
 - **Alloy X stressed-member block (Rule 5):** A 3D-printed, finish-machined block and crankcase in Alloy X (see below) with steel cylinder liners, so the engine carries rear suspension loads directly without a heavy subframe.
 - **High-power battery (~45 kg):** High-power lithium cells at ~10 kW/kg deliver the full 450 kW. The pack holds ~4.5 kWh, with ~8 MJ usable (enough for ~18 s of full deployment from full charge). Braking regen through both MGU-Ks plus MGU-H harvest on straights recovers ~7–8 MJ per lap, so the car can deploy full electric power for ~15–18 s every lap.
@@ -65,12 +65,15 @@ Alloy X is the team's novel high-temperature light alloy, permitted under Techni
 
 ### 2. Geared for 370+ km/h (230+ mph)
 
-A 6,200 RPM redline doesn't make a car slow if the gearbox is geared for it.
+A 6,200 RPM redline doesn't make a car slow: gearing converts engine speed into road speed, so what matters is power at the wheels.
 
-- **Long final drive ratios:** Because the OP4 and dual electric motors deliver peak torque almost from idle, the car runs very tall gears.
-- **0–100 km/h (0–62 mph):** ~2.1 s, thanks to the AWD front-axle electric launch.
-- **0–300 km/h (0–186 mph):** Under 8.5 s, with the electric motors bridging every gearshift.
-- **Top speed:** 375+ km/h (233+ mph) on long straights with the active aero wings flattened.
+- **Tall overall gearing:** With 0.72 m tyres, 375 km/h is ~2,760 wheel RPM, so top gear needs an overall ratio of ~2.24:1 at 6,200 RPM, about half an F1 car's (~4.6:1 at ~12,000 RPM). The engine turns slower, but at equal power the wheel force is the same.
+- **6-speed spacing:** First gear (~8.4:1 overall) tops out around 100 km/h. Six ratios from 8.4:1 to 2.24:1 give ~30% steps, so each upshift drops the engine from 6,200 to ~4,800 RPM, inside its 3,000–6,200 RPM working band. The electric motors fill the torque gap during each shift.
+- **Front motors:** Fixed single-speed reduction of ~7:1 (motor ~20,000 RPM at top speed), no gearbox.
+- **0–100 km/h (0–62 mph): ~2.0–2.1 s.** Traction-limited, not power-limited: with AWD, racing slicks (~1.6 grip coefficient without downforce), and ~929 kg at race start, the car can accelerate at ~1.6 g, which needs only ~400 kW at 100 km/h.
+- **0–200 km/h: ~3.8 s.** Still mostly traction-limited, with downforce adding grip as speed rises.
+- **0–300 km/h (0–186 mph): ~7.5–8 s.** Power-limited above ~200 km/h, with drag taking a growing share. Uses ~3.4 MJ of battery energy, well within the ~8 MJ usable.
+- **Top speed: ~375 km/h (233 mph)** with wings flattened, needing a drag area (CdA) of ~1.3 m² or less at ~910 kW at the wheels. This requires full electric deployment at the end of the straight; on diesel power alone, top speed is ~320 km/h (see M5).
 
 ### 3. Extreme Ground-Effect Downforce
 
@@ -80,21 +83,29 @@ Because the opposed-piston engine has no cylinder heads above the block, the eng
 
 ## Comparison With a Real F1 Car
 
-| Metric | Real 2026 F1 Car | ScuderiaTroll OP4 Diesel-Electric |
+All figures are rough estimates: F1 values are commonly cited approximations, and ScuderiaTroll values are calculated from this document's specifications.
+
+| Metric | 2026 F1 car (est.) | ScuderiaTroll OP4 diesel-electric (est.) |
 | --- | --- | --- |
 | Total power | ~1,000 hp (V6 hybrid) | ~1,350 hp (750 hp OP4 + 450 kW electric) |
+| Mass (car + driver, no fuel) | 768 kg | ~835 kg |
 | Drive layout | Rear-wheel drive | All-wheel drive (independent front motors with torque vectoring) |
-| 0–200 km/h | ~4.4 s | ~3.8 s (AWD + instant diesel/electric torque) |
-| Top speed | ~355 km/h (220 mph) | ~375+ km/h (233+ mph) |
-| Cornering grip | ~5.0 G | 5.5+ G (low centre of gravity + low engine cover) |
+| 0–200 km/h | ~4.4 s | ~3.8 s (AWD traction) |
+| Top speed | ~355 km/h (220 mph) | ~375 km/h (233 mph), with electric deployment |
+| Peak cornering grip | ~5.0 G | ~4.7–5.0 G (see below) |
+
+**Cornering grip:** In steady high-speed corners, grip comes from tyre friction times (weight + downforce). With the same downforce as an F1 car, the extra mass lowers peak lateral grip slightly: ~4.7 G at race start (~929 kg) rising to ~5.0 G at race end (~835 kg) as fuel burns. The low CG and torque vectoring help in corner entry, direction changes, and slow corners, but don't raise the steady-state limit. Matching F1's peak would take ~10% more downforce than an F1 car.
 
 ## How to Win
 
 > "Horsepower sells cars, torque wins races." — Carroll Shelby
 
-- **Corner exit domination:** A high-revving F1 engine has to downshift aggressively and keep revs high to stay in its power band. The OP4 diesel-electric delivers 1,200+ Nm of combined system torque right off the apex. With AWD electric traction pulling the front tyres and the e-turbos holding full boost, it launches out of slow hairpins like a slingshot.
-- **Effortless mid-range punch:** Instead of living near a 15,000 RPM redline, the engine pulls from 3,000 to 6,200 RPM, giving the driver flexibility to short-shift in the wet or save tyres without losing lap time.
-- **Relentless top-end speed:** Because the electric motors and twin MGU-H turbines keep feeding ~1,350 hp all the way up the rev range, the car doesn't run out of breath at the end of a long straight.
+The quote is the team's spirit, but the real advantages are traction and power, not engine torque:
+
+- **Corner exit domination:** Out of slow corners every car is traction-limited. AWD puts power through four tyres instead of two, and torque vectoring on the front axle helps the car rotate and straighten up earlier. The e-turbos hold full boost from the apex, so there's no lag before the diesel delivers.
+- **Wide power band:** The engine works from 3,000 to 6,200 RPM with electric torque filling every shift, so the car needs only 6 gears and the driver can short-shift in the wet or to save tyres with little lap-time cost.
+- **Straight-line speed:** ~1,350 hp against F1's ~1,000 hp, with ~20–25% better power-to-weight, wins the drag race out of every corner. On long straights, top speed depends on saving battery charge for the end of the straight (see M5).
+- **Tyre management:** The heavier car wears tyres faster (see [weight-budget.md](weight-budget.md)), but AWD spreads traction and braking work across all four tyres, which partly offsets it. With only 3 swaps per race, this is where races are won or lost.
 
 ---
 
@@ -129,7 +140,16 @@ With no electric share to track, the MGU-H can motor the turbos freely for lag e
 ### Major
 
 **M1. Displacement vs. power: resolved.**
-750 hp at 6,200 RPM is ~860 Nm. At the original 2.2 L, that was a brake mean effective pressure (BMEP) of ~25 bar in a two-stroke, equivalent to ~49 bar in a four-stroke, beyond the 2014–2025 F1 V6 (roughly 39 bar equivalent). **Adopted:** displacement grows to 3.2 L, giving ~17 bar BMEP (≈34 bar four-stroke equivalent), below F1 V6 stress levels. Remaining risk: racing diesels have typically topped out around 5,000 RPM because diesel combustion is slow, so the 6,200 RPM redline is still aggressive.
+750 hp at 6,200 RPM is ~860 Nm. At the original 2.2 L, that was a brake mean effective pressure (BMEP) of ~25 bar in a two-stroke, equivalent to ~49 bar in a four-stroke, beyond the 2014–2025 F1 V6 (roughly 39 bar equivalent). **Adopted:** displacement grows to 3.2 L, giving ~17 bar BMEP (≈34 bar four-stroke equivalent), below F1 V6 stress levels.
+
+**6,200 RPM redline: resolved with mitigations.** Racing diesels have typically topped out around 5,000 RPM because diesel combustion takes a roughly fixed time (~2 ms), which at high RPM stretches across more crank angle and wastes energy into the exhaust. A two-stroke at 6,200 RPM also fires each cylinder ~103 times per second, as often as a four-stroke at 12,400 RPM. **Adopted mitigations:**
+
+- **~3,000 bar common-rail injection** for faster fuel-air mixing.
+- **Two injectors per cylinder,** side-mounted in the liner wall (standard for opposed-piston diesels, which have no head to put an injector in).
+- **HVO's high cetane number** (~75–90, versus ~50 for fossil diesel) shortens ignition delay, a genuine benefit of the chosen fuel.
+- **Opposed-piston combustion chamber:** No cylinder head means lower heat loss and strong swirl from the uniflow scavenging, both of which speed up combustion.
+
+Mean piston speed is a comfortable ~14 m/s. **Fallback:** if the redline must drop to ~5,500 RPM, keeping 750 hp needs ~19 bar BMEP (≈38 bar four-stroke equivalent), still just under F1 V6 stress levels.
 
 **M2. The boost figures and Audi comparison are off, and "compound" is mislabelled.**
 
@@ -167,13 +187,16 @@ The design adds two front MGU-Ks with front driveshafts (no differential), SCR +
 
 ### Minor
 
-- **HVO terminology:** HVO is "renewable diesel" (paraffinic, hydrotreated), not "biodiesel" (FAME), and not "synthetic" in the e-fuel sense.
+All resolved:
+
+- ~~HVO terminology~~ **Resolved:** now described as renewable diesel (paraffinic, hydrotreated), not biodiesel (FAME) or synthetic e-fuel.
 - ~~Split vs. numbers~~ **Resolved:** headline figure fixed at ~1,350 hp (560 kW diesel + 450 kW electric), a 55/45 split.
-- **"Torque wins races":** At any given road speed, acceleration depends on power at the wheels; gearing converts engine torque freely. A 6,200 RPM engine with tall gears produces the same wheel force as a 15,000 RPM engine with short gears at equal power. The real advantages here are AWD traction out of slow corners and a wide, flat power band (fewer shifts), and those are the arguments to make.
-- **"Combined system torque" of 1,200+ Nm:** Adding engine and motor torques measured on different shafts at different speeds isn't meaningful. Quote wheel force or power instead.
-- **"Doesn't run out of breath":** Top speed is reached when power equals aerodynamic drag. The car stops accelerating there regardless, and only sooner if the battery runs out mid-straight. As a sanity check, ~375 km/h with ~840 kW at the wheels implies a drag area (CdA) of ~1.2 m² or less, which is plausible with wings flattened.
-- **Diesel "thick walls" premise:** Modern F1 engines already run peak cylinder pressures in a similar range, so the diesel weight penalty is smaller than implied.
-- **Comparison table:** Both columns are estimates with no sources. Label them as estimates, and recalculate after the fixes above.
+- ~~"Torque wins races"~~ **Resolved:** "How to Win" now argues traction, power band, and power-to-weight. At any road speed, acceleration depends on power at the wheels; gearing converts engine torque freely.
+- ~~"Combined system torque" of 1,200+ Nm~~ **Resolved:** removed; adding torques measured on different shafts at different speeds isn't meaningful.
+- ~~"Doesn't run out of breath"~~ **Resolved:** top speed is now stated as drag-limited (~375 km/h at CdA ≤ ~1.3 m²) and battery-dependent.
+- ~~Diesel "thick walls" premise~~ **Resolved:** reworded; F1 engines already run similar peak pressures, and Alloy X covers the rest.
+- ~~Comparison table~~ **Resolved:** labelled as estimates and recalculated. Cornering grip corrected from "5.5+ G" to ~4.7–5.0 G: a heavier car with the same downforce has slightly *less* steady-state grip, not more.
+- ~~Gearing~~ **Resolved:** "long final drive because of torque from idle" replaced with calculated ratios (~8.4:1 to ~2.24:1 over 6 speeds).
 
 ### Strengths Worth Keeping
 
@@ -181,6 +204,7 @@ The design adds two front MGU-Ks with front driveshafts (no differential), SCR +
 - **Front MGU-Ks (now one per wheel):** The front axle does most of the braking, so front regen recovers far more energy than rear-only. AWD traction out of slow corners is also a real advantage.
 - **Electrified turbocharging:** Solves the two-stroke scavenging problem and turbo lag in one system.
 - **Exploiting no fuel-flow limit:** Valid under the current rules; the gain is real, just smaller than claimed (see M1).
+- **HVO fuel:** Besides satisfying Rule 4, its high cetane number directly helps the high-RPM diesel combustion (see M1).
 
 ### Suggested Next Steps
 
