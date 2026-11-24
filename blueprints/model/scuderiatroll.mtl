@@ -1,0 +1,109 @@
+# ScuderiaTroll materials
+newmtl structure
+Kd 0.2314 0.2588 0.3216
+d 0.25
+
+newmtl bodywork
+Kd 0.7843 0.0627 0.1804
+d 0.20
+
+newmtl floor
+Kd 0.1686 0.1686 0.1686
+d 1.00
+
+newmtl aero
+Kd 0.7843 0.0627 0.1804
+d 1.00
+
+newmtl tyre
+Kd 0.1020 0.1020 0.1020
+d 1.00
+
+newmtl brake
+Kd 0.5412 0.5412 0.5412
+d 1.00
+
+newmtl suspension
+Kd 0.3608 0.3608 0.3608
+d 1.00
+
+newmtl driver
+Kd 0.9490 0.7569 0.3059
+d 1.00
+
+newmtl engine
+Kd 0.8510 0.5098 0.1686
+d 1.00
+
+newmtl gearbox
+Kd 0.4784 0.4157 0.3529
+d 1.00
+
+newmtl turbo
+Kd 0.6902 0.6902 0.6902
+d 1.00
+
+newmtl exhaust
+Kd 0.6275 0.3216 0.1765
+d 1.00
+
+newmtl aftertreatment
+Kd 0.6235 0.8275 0.7804
+d 1.00
+
+newmtl motor
+Kd 0.1804 0.5255 0.8706
+d 1.00
+
+newmtl inverter
+Kd 0.3294 0.6275 1.0000
+d 1.00
+
+newmtl battery
+Kd 0.0627 0.6745 0.5176
+d 1.00
+
+newmtl hv
+Kd 1.0000 0.6235 0.2627
+d 1.00
+
+newmtl cooling
+Kd 0.4549 0.7255 1.0000
+d 1.00
+
+newmtl fan
+Kd 0.3882 0.4314 0.4471
+d 1.00
+
+newmtl charge_air
+Kd 0.5059 0.9255 0.9255
+d 1.00
+
+newmtl fuel
+Kd 0.9922 0.7961 0.4314
+d 0.50
+
+newmtl def
+Kd 0.8745 0.9020 0.9137
+d 1.00
+
+newmtl electronics
+Kd 0.4235 0.3608 0.9059
+d 1.00
+
+newmtl hydraulics
+Kd 0.8824 0.4392 0.3333
+d 1.00
+
+newmtl fire
+Kd 0.8392 0.1882 0.1922
+d 1.00
+
+newmtl misc
+Kd 0.3882 0.4314 0.4471
+d 1.00
+
+newmtl cg
+Kd 1.0000 0.0000 1.0000
+d 1.00
+
